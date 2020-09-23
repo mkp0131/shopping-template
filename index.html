@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Shopping</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1 class="logo">
+        <a href="/">
+            <img src="./img/logo.png" alt="logo" />
+        </a>
+    </h1>
+
+    <nav class="menu inner">
+        <button class="btn-icon" onclick="loadClothList(cloth => cloth.type === 't-shirts')"><img src="./img/blue_t.png" alt="" /></button>
+        <button class="btn-icon" onclick="loadClothList(cloth => cloth.type === 'pants')"><img src="./img/blue_p.png" alt="" /></button>
+        <button class="btn-icon" onclick="loadClothList(cloth => cloth.type === 'skirt')"><img src="./img/blue_s.png" alt="" /></button>
+        <button class="btn-txt blue" onclick="loadClothList(cloth => cloth.color === 'blue')">blue</button>
+        <button class="btn-txt yellow" onclick="loadClothList(cloth => cloth.color === 'yellow')">yellow</button>
+        <button class="btn-txt pink" onclick="loadClothList(cloth => cloth.color === 'pink')">pink</button>
+    </nav>
+
+    <section class="contents inner js-contents"></section>
+
+    <!-- ### JS ### -->
+    <script src="src/main.js" defer></script>
+</body>
+
+</html>
