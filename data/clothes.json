@@ -1,0 +1,112 @@
+[{
+        "type": "pants",
+        "gender": "man",
+        "size": "large size",
+        "color": "blue",
+        "img_file": "blue_p.png"
+    }, {
+        "type": "pants",
+        "gender": "man",
+        "size": "small size",
+        "color": "blue",
+        "img_file": "blue_p.png"
+    }, {
+        "type": "pants",
+        "gender": "man",
+        "size": "large size",
+        "color": "yellow",
+        "img_file": "yellow_p.png"
+    }, {
+        "type": "pants",
+        "gender": "man",
+        "size": "small size",
+        "color": "yellow",
+        "img_file": "yellow_p.png"
+    }, {
+        "type": "pants",
+        "gender": "man",
+        "size": "large size",
+        "color": "pink",
+        "img_file": "pink_p.png"
+    }, {
+        "type": "pants",
+        "gender": "man",
+        "size": "small size",
+        "color": "pink",
+        "img_file": "pink_p.png"
+    },
+
+    {
+        "type": "skirt",
+        "gender": "female",
+        "size": "large size",
+        "color": "blue",
+        "img_file": "blue_s.png"
+    }, {
+        "type": "skirt",
+        "gender": "female",
+        "size": "small size",
+        "color": "blue",
+        "img_file": "blue_s.png"
+    }, {
+        "type": "skirt",
+        "gender": "female",
+        "size": "large size",
+        "color": "yellow",
+        "img_file": "yellow_s.png"
+    }, {
+        "type": "skirt",
+        "gender": "female",
+        "size": "small size",
+        "color": "yellow",
+        "img_file": "yellow_s.png"
+    }, {
+        "type": "skirt",
+        "gender": "female",
+        "size": "large size",
+        "color": "pink",
+        "img_file": "pink_s.png"
+    }, {
+        "type": "skirt",
+        "gender": "female",
+        "size": "small size",
+        "color": "pink",
+        "img_file": "pink_s.png"
+    }, {
+        "type": "t-shirts",
+        "gender": "unisex",
+        "size": "large size",
+        "color": "blue",
+        "img_file": "blue_t.png"
+    }, {
+        "type": "t-shirts",
+        "gender": "unisex",
+        "size": "small size",
+        "color": "blue",
+        "img_file": "blue_t.png"
+    }, {
+        "type": "t-shirts",
+        "gender": "unisex",
+        "size": "large size",
+        "color": "yellow",
+        "img_file": "yellow_t.png"
+    }, {
+        "type": "t-shirts",
+        "gender": "unisex",
+        "size": "small size",
+        "color": "yellow",
+        "img_file": "yellow_t.png"
+    }, {
+        "type": "t-shirts",
+        "gender": "unisex",
+        "size": "large size",
+        "color": "pink",
+        "img_file": "pink_t.png"
+    }, {
+        "type": "t-shirts",
+        "gender": "unisex",
+        "size": "small size",
+        "color": "pink",
+        "img_file": "pink_t.png"
+    }
+]

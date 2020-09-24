@@ -1,123 +1,8 @@
-// type: pants / t-shirts / skirt
-// gender: female or man / unisex
-// size: large size or small size
-// color: blue / yellow / pink
-const clothes = [{
-        type: 'pants',
-        gender: 'man',
-        size: 'large size',
-        color: 'blue',
-        img_file: 'blue_p.png'
-    }, {
-        type: 'pants',
-        gender: 'man',
-        size: 'small size',
-        color: 'blue',
-        img_file: 'blue_p.png'
-    }, {
-        type: 'pants',
-        gender: 'man',
-        size: 'large size',
-        color: 'yellow',
-        img_file: 'yellow_p.png'
-    }, {
-        type: 'pants',
-        gender: 'man',
-        size: 'small size',
-        color: 'yellow',
-        img_file: 'yellow_p.png'
-    }, {
-        type: 'pants',
-        gender: 'man',
-        size: 'large size',
-        color: 'pink',
-        img_file: 'pink_p.png'
-    }, {
-        type: 'pants',
-        gender: 'man',
-        size: 'small size',
-        color: 'pink',
-        img_file: 'pink_p.png'
-    },
+// html display set items
+const displayItems = (clothes, predi) => {
+    const contents_box = document.querySelector('.js-contents');
+    contents_box.innerHTML = 'Loading...';
 
-    {
-        type: 'skirt',
-        gender: 'female',
-        size: 'large size',
-        color: 'blue',
-        img_file: 'blue_s.png'
-    }, {
-        type: 'skirt',
-        gender: 'female',
-        size: 'small size',
-        color: 'blue',
-        img_file: 'blue_s.png'
-    }, {
-        type: 'skirt',
-        gender: 'female',
-        size: 'large size',
-        color: 'yellow',
-        img_file: 'yellow_s.png'
-    }, {
-        type: 'skirt',
-        gender: 'female',
-        size: 'small size',
-        color: 'yellow',
-        img_file: 'yellow_s.png'
-    }, {
-        type: 'skirt',
-        gender: 'female',
-        size: 'large size',
-        color: 'pink',
-        img_file: 'pink_s.png'
-    }, {
-        type: 'skirt',
-        gender: 'female',
-        size: 'small size',
-        color: 'pink',
-        img_file: 'pink_s.png'
-    }, {
-        type: 't-shirts',
-        gender: 'unisex',
-        size: 'large size',
-        color: 'blue',
-        img_file: 'blue_t.png'
-    }, {
-        type: 't-shirts',
-        gender: 'unisex',
-        size: 'small size',
-        color: 'blue',
-        img_file: 'blue_t.png'
-    }, {
-        type: 't-shirts',
-        gender: 'unisex',
-        size: 'large size',
-        color: 'yellow',
-        img_file: 'yellow_t.png'
-    }, {
-        type: 't-shirts',
-        gender: 'unisex',
-        size: 'small size',
-        color: 'yellow',
-        img_file: 'yellow_t.png'
-    }, {
-        type: 't-shirts',
-        gender: 'unisex',
-        size: 'large size',
-        color: 'pink',
-        img_file: 'pink_t.png'
-    }, {
-        type: 't-shirts',
-        gender: 'unisex',
-        size: 'small size',
-        color: 'pink',
-        img_file: 'pink_t.png'
-    },
-];
-
-const contents_box = document.querySelector('.js-contents');
-
-function loadClothList(predi) {
     contents_box.innerHTML = '';
 
     const filter_clothes = clothes.filter((cloth) => {
@@ -125,15 +10,41 @@ function loadClothList(predi) {
             return cloth;
         }
     });
-    filter_clothes.forEach(cloth => {
-        const cloth_info = document.createElement('div');
-        cloth_info.classList.add('cloth-info');
-        cloth_info.innerHTML = `
-					<div class=\"cloth-info__img\"><img src=\"./img/${cloth.img_file}\"  /></div>
-					<div class=\"cloth-info__txt\">${cloth.gender}, ${cloth.size}</div>
-				`
-        contents_box.appendChild(cloth_info);
+    contents_box.innerHTML = filter_clothes.map(cloth => {
+        return `
+					<div class=\"cloth-info\">
+						<div class=\"cloth-info__img\"><img src=\"./img/${cloth.img_file}\"  /></div>
+						<div class=\"cloth-info__txt\">${cloth.gender}, ${cloth.size}</div>
+					</div>
+				`;
+    }).join('');
+}
+
+// set EventListener
+const setAddEvent = (clothes) => {
+    const btns = document.querySelector('.js-menu');
+    btns.addEventListener('click', (event) => {
+        const dataset = event.target.dataset;
+        const key = dataset.key;
+        const value = dataset.value;
+        if (key && value) {
+            displayItems(clothes, v => v[key] === value)
+        }
     })
 }
 
-loadClothList(val => val);
+// fetch load JSON
+const loadClothList = () => {
+    return fetch('../data/clothes.json')
+        .then(res => res.json())
+        .then(clothes => clothes)
+        .catch(err => console.log('🤬fetch: err1', err));
+}
+
+
+loadClothList()
+    .then(clothes => {
+        console.log('@Json', );
+        displayItems(clothes, v => v);
+        setAddEvent(clothes)
+    })

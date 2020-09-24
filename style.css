@@ -1,106 +1,110 @@
 :root {
- /* color */
- --color-black: #3f454d;
- --color-white: #ffffff;
- --color-blue: #3b88c3;
- --color-yellow: #fbbe28;
- --color-pink: #fd7f84;
- --color-light-grey: #dfdfdf;
+  /* color */
+  --color-black: #3f454d;
+  --color-white: #ffffff;
+  --color-blue: #3b88c3;
+  --color-yellow: #fbbe28;
+  --color-pink: #fd7f84;
+  --color-light-grey: #dfdfdf;
 }
 
 * {
- box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 img {
- width: 100%;
- vertical-align: top;
+  width: 100%;
+  vertical-align: top;
 }
 
 button {
- background: none;
- border: none;
- padding: 0;
+  background: none;
+  border: none;
+  padding: 0;
 }
 
 .inner {
- max-width: 320px;
- margin: 0 auto;
- width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 body {
- padding: 0;
- margin: 0;
- background: var(--color-black);
- width: 100vw;
- height: 100vh;
- font-size: 16px;
- display: flex;
- flex-direction: column;
- align-items: center;
+  padding: 0;
+  margin: 0;
+  background: var(--color-black);
+  width: 100vw;
+  height: 100vh;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .logo {
- margin: 0 auto;
- max-width: 80px;
- margin-top: 10px;
+  margin: 0 auto;
+  max-width: 80px;
+  margin-top: 10px;
 }
 
 .menu {
- display: flex;
- justify-content: space-between;
- margin: 10px 0 20px;
- flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 20px;
+  flex-shrink: 0;
 }
 
 .btn-icon {
- width: 40px;
- padding: 0 5px;
+  width: 40px;
+  padding: 0 5px;
+}
+
+.btn-icon img {
+  pointer-events: none;
 }
 
 .btn-txt {
- background: #ffbb00;
- padding: 5px 10px;
- font-weight: 700;
- border-radius: 4px;
- overflow: hidden;
- line-height: 1;
+  background: #ffbb00;
+  padding: 5px 10px;
+  font-weight: 700;
+  border-radius: 4px;
+  overflow: hidden;
+  line-height: 1;
 }
 
 .btn-txt.blue {
- background: var(--color-blue);
+  background: var(--color-blue);
 }
 
 .btn-txt.yellow {
- background: var(--color-yellow);
+  background: var(--color-yellow);
 }
 
 .btn-txt.pink {
- background: var(--color-pink);
+  background: var(--color-pink);
 }
 
 .contents {
- overflow-y: scroll;
- flex-grow: 1;
- padding-bottom: 20px;
+  overflow-y: scroll;
+  flex-grow: 1;
+  padding-bottom: 20px;
 }
 
 .cloth-info {
- background: #fff;
- border-radius: 4px;
- overflow: hidden;
- display: flex;
- align-items: center;
- padding: 5px 10px 5px 15px;
- margin-bottom: 5px;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px 5px 15px;
+  margin-bottom: 5px;
 }
 
 .cloth-info .cloth-info__img {
- width: 30px;
+  width: 30px;
 }
 
 .cloth-info .cloth-info__txt {
- margin-left: 20px;
- font-weight: 700;
+  margin-left: 20px;
+  font-weight: 700;
 }
